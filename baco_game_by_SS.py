@@ -27,4 +27,23 @@ print(baco(6666666666,5261235412,10))
 #大学是自习的圣地，不是跟老师学的地方。跟着老师学的不会有什么成就。（世界上所有的大学都是这样的）
 #越简单的算法越能实现精巧的功能，算法行数越少，你的程序编写能力越高。
 #坚持下去的乌龟比兔子快# # 牛逼说我心里面了
-
+import random
+def main():
+    #既然都到这个份了，那就三位数了
+    s_n=random.randint(100,999)
+    print("Welcome to Baco game")
+    print("We have thought a 3-bit number,guess it!")
+    while True:
+        u_n=input("Enter your answer:")
+        return_nu=baco(s_n,u_n,3)
+        if return_nu==1:
+            print("You have number(s) right but in wrong position.")
+        elif return_nu==2:
+            print("You have number(s) right and in correct position.")
+        elif return_nu==3:
+            print("You have NO number(s) right and in correct position.")
+        else:
+            print('Fuck you,Error!')
+    #嘿嘿，忘了加用户如果猜对的情况了，没事，就这样吧。
+main()
+#就这样吧，训练为主，游戏不好玩。nb
